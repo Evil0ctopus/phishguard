@@ -1,5 +1,41 @@
 import re
 import sys
+import argparse
+
+import re
+import sys
+import argparse   # new import
+
+# --- helper functions ---
+def check_keywords(email_text):
+    ...
+def check_links(email_text):
+    ...
+def analyze_email(email_text):
+    ...
+
+# --- main function ---
+def main():
+    parser = argparse.ArgumentParser(description="PhishGuard - Email Phishing Detector")
+    parser.add_argument("--scan", help="Scan an email text file")
+    parser.add_argument("--text", help="Scan raw email text directly")
+    args = parser.parse_args()
+
+    if args.scan:
+        with open(args.scan, "r", encoding="utf-8") as f:
+            email_text = f.read()
+        analyze_email(email_text)
+
+    elif args.text:
+        analyze_email(args.text)
+
+    else:
+        print("Usage: python phishguard.py --scan email.txt OR --text 'email body'")
+
+# --- entry point ---
+if __name__ == "__main__":
+    main()
+
 
 # --- Keyword list (starter set, expandable later) ---
 PHISHING_KEYWORDS = [
