@@ -21,6 +21,7 @@ PhishGuard is an intelligent email security tool designed to protect users from 
 ```bash
 pip install -r requirements.txt
 
+
 ## 🛣️ Roadmap
 - Phase 1: Foundation – keyword detection + link analysis
 - Phase 2: Usability – CLI + GUI
