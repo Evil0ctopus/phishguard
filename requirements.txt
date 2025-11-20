@@ -1,0 +1,13 @@
+# Core libraries for parsing and analysis
+requests==2.31.0
+beautifulsoup4==4.12.2
+regex==2023.10.3
+
+# For future machine learning (Phase 3)
+scikit-learn==1.3.2
+pandas==2.1.1
+numpy==1.26.0
+
+# For optional GUI/web interface (Phase 2)
+flask==3.0.0
+tkintertable==1.3.3
